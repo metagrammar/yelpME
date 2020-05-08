@@ -21,15 +21,9 @@ function App() {
 		setUserInput("");
 	};
 
-	return (
-		<>
-			<RestaurantPage
-				handleChange={(e) => handleChange(e)}
-				handleSubmit={(e) => handleSubmit(e)}
-				userInput={userInput}
-			/>
-			{/* 
-					<Container
+	if (!search)
+		return (
+			<Container
 				maxWidth='false'
 				style={{
 					background: "linear-gradient(to right, #8e9eab, #eef2f3)",
@@ -50,7 +44,16 @@ function App() {
 						userInput={userInput}
 					/>
 				</Grid>
-				</Container> */}
+			</Container>
+		);
+
+	return (
+		<>
+			<RestaurantPage
+				handleChange={(e) => handleChange(e)}
+				handleSubmit={(e) => handleSubmit(e)}
+				userInput={userInput}
+			/>
 		</>
 	);
 }
