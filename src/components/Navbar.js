@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-function Navbar() {
+function Navbar({ handleChange, handleSubmit, userInput }) {
 	const classes = useStyles();
 
 	return (
@@ -47,7 +47,11 @@ function Navbar() {
 					>
 						<MenuIcon />
 					</IconButton>
-					<Search />
+					<Search
+						handleChange={handleChange}
+						handleSubmit={handleSubmit}
+						userInput={userInput}
+					/>
 
 					<IconButton
 						aria-label='search'

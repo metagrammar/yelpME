@@ -5,6 +5,7 @@ import SearchBar from "./components/search";
 import { useState, useEffect } from "react";
 import RestaurantPage from "./components/RestaurantPage";
 import Results from "./components/Results";
+import { Route, Switch } from "react-router-dom";
 
 import "./App.css";
 
@@ -55,11 +56,19 @@ function App() {
 				handleSubmit={(e) => handleSubmit(e)}
 				userInput={userInput}
 			/>
-			{/* <RestaurantPage
-				handleChange={(e) => handleChange(e)}
-				handleSubmit={(e) => handleSubmit(e)}
-				userInput={userInput}
-			/> */}
+			<Switch>
+				<Route
+					path='/results/:name'
+					render={(props) => (
+						<RestaurantPage
+							handleChange={(e) => handleChange(e)}
+							handleSubmit={(e) => handleSubmit(e)}
+							userInput={userInput}
+							{...props}
+						/>
+					)}
+				/>
+			</Switch>
 		</>
 	);
 }

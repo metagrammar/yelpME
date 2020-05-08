@@ -32,7 +32,7 @@ const SearchBar = (props) => {
 				<Grid container direction='column'>
 					<TextField
 						id='outlined-basic'
-						label='City Name'
+						label='Cuisine / City'
 						variant='outlined'
 						onChange={(e) => props.handleChange(e)}
 						value={props.userInput}

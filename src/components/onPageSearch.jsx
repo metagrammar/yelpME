@@ -34,7 +34,7 @@ const SearchBar = (props) => {
 					<TextField
 						color='primary'
 						id='outlined-basic'
-						label='City Name'
+						label='Cuisine / City'
 						variant='outlined'
 						onChange={(e) => props.handleChange(e)}
 						value={props.userInput}

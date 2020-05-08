@@ -5,6 +5,8 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import ImageSlider from "./ImageSlider";
+import StarIcon from "@material-ui/icons/Star";
+import StarBorderIcon from "@material-ui/icons/StarBorder";
 
 const useStyles = makeStyles({
 	title: {
@@ -51,10 +53,7 @@ const RestaurantPage = ({ handleChange, userInput, handleSubmit }) => {
 			<Container maxWidth='lg' styles={{ background: "white" }}>
 				<Grid container spacing={3}>
 					<Grid item xs={8}>
-						<Typography className={classes.title}>
-							{" "}
-							/*** Restaurant Name /{" "}
-						</Typography>
+						<Typography className={classes.title}> Le Greatest Coq </Typography>
 						<Typography className={classes.text}>
 							Bacon ipsum dolor amet short ribs t-bone corned beef fatback.
 							Turducken buffalo drumstick tri-tip short ribs capicola sirloin,
@@ -79,16 +78,26 @@ const RestaurantPage = ({ handleChange, userInput, handleSubmit }) => {
 					</Grid>
 					<Grid item direction='column' xs={4} className={classes.sideText}>
 						<Grid item className={classes.sideText}>
-							<Typography>rating</Typography>
+							<Typography>
+								{" "}
+								***
+								{/* <p>
+									{StarIcon}
+									{StarIcon}
+									{StarIcon}
+									{StarIcon}
+									{StarBorderIcon}
+								</p> */}
+							</Typography>
 						</Grid>
-						<Grid item className={classes.sideText}>
-							<Typography>money</Typography>
+						<Grid item>
+							<Typography>€€</Typography>
 						</Grid>
-						<Grid item className={classes.sideText}>
-							<Typography>address</Typography>
+						<Grid item>
+							<Typography>Bernburger Str. 35, Kreuzberg.</Typography>
 						</Grid>
-						<Grid item className={classes.sideText}>
-							<Typography>phone</Typography>
+						<Grid item>
+							<Typography>+49 08276 4983 823</Typography>
 						</Grid>
 					</Grid>
 				</Grid>

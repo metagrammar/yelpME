@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Grid, CardMedia, Hidden } from "@material-ui/core";
 import Navbar from "./Navbar";
 import ResultItem from "./ResultItem";
+import { NavLink } from "react-router-dom";
 
 // import ImageGrid from './ImageGrid';
 
@@ -35,10 +36,20 @@ function Results({ handleChange, handleSubmit, userInput }) {
 					lg={6}
 					style={{ height: "100vh", width: "50%" }}
 				>
-					<ResultItem />
-					<ResultItem />
-					<ResultItem />
-					<ResultItem />
+					<NavLink style={{ textDecoration: "none" }} to='/results/1'>
+						<ResultItem />
+					</NavLink>
+					<NavLink style={{ textDecoration: "none" }} to='/results/2'>
+						<ResultItem />
+					</NavLink>
+					<NavLink style={{ textDecoration: "none" }} to='/results/3'>
+						{" "}
+						<ResultItem />
+					</NavLink>
+					<NavLink style={{ textDecoration: "none" }} to='/results/4'>
+						{" "}
+						<ResultItem />
+					</NavLink>
 				</Grid>
 				<Hidden xsDown>
 					<Grid

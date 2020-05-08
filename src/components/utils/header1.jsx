@@ -10,7 +10,7 @@ const HeaderOne = ({ text }) => {
 			component='h2'
 			gutterBottom
 			align='center'
-			styles={{ color: "white" }}
+			styles={{ color: "white", textShadow: "2px 2px 6px rgba(0,0,0,0.54)" }}
 		>
 			{text}
 		</Typography>
