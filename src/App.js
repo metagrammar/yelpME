@@ -4,6 +4,7 @@ import Grid from "@material-ui/core/Grid";
 import SearchBar from "./components/search";
 import { useState, useEffect } from "react";
 import RestaurantPage from "./components/RestaurantPage";
+import Results from "./components/Results";
 
 import "./App.css";
 
@@ -49,11 +50,12 @@ function App() {
 
 	return (
 		<>
-			<RestaurantPage
+			<Results />
+			{/* <RestaurantPage
 				handleChange={(e) => handleChange(e)}
 				handleSubmit={(e) => handleSubmit(e)}
 				userInput={userInput}
-			/>
+			/> */}
 		</>
 	);
 }
