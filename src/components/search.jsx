@@ -11,7 +11,6 @@ const useStyles = makeStyles((theme) => ({
 			margin: theme.spacing(0),
 			width: "50ch",
 		},
-		borderColor: "white",
 	},
 
 	input: {

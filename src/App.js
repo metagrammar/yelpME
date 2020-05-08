@@ -50,7 +50,11 @@ function App() {
 
 	return (
 		<>
-			<Results />
+			<Results
+				handleChange={(e) => handleChange(e)}
+				handleSubmit={(e) => handleSubmit(e)}
+				userInput={userInput}
+			/>
 			{/* <RestaurantPage
 				handleChange={(e) => handleChange(e)}
 				handleSubmit={(e) => handleSubmit(e)}
