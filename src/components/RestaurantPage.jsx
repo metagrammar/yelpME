@@ -51,7 +51,10 @@ const RestaurantPage = ({ handleChange, userInput, handleSubmit }) => {
 			<Container maxWidth='lg' styles={{ background: "white" }}>
 				<Grid container spacing={3}>
 					<Grid item xs={8}>
-						<Typography className={classes.title}>Restaurant Name</Typography>
+						<Typography className={classes.title}>
+							{" "}
+							/*** Restaurant Name /{" "}
+						</Typography>
 						<Typography className={classes.text}>
 							Bacon ipsum dolor amet short ribs t-bone corned beef fatback.
 							Turducken buffalo drumstick tri-tip short ribs capicola sirloin,
