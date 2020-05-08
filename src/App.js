@@ -1,9 +1,58 @@
 import React from "react";
-import logo from "./logo.svg";
+import Container from "@material-ui/core/Container";
+import Grid from "@material-ui/core/Grid";
+import SearchBar from "./components/search";
+import { useState, useEffect } from "react";
+import RestaurantPage from "./components/RestaurantPage";
+
 import "./App.css";
 
 function App() {
-	return <div className='App'></div>;
+	const [userInput, setUserInput] = useState("");
+	const [search, setSearch] = useState("");
+
+	const handleChange = (e) => {
+		setUserInput(e.target.value);
+	};
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		let value = userInput;
+		setSearch(value);
+		setUserInput("");
+	};
+
+	return (
+		<>
+			<RestaurantPage
+				handleChange={(e) => handleChange(e)}
+				handleSubmit={(e) => handleSubmit(e)}
+				userInput={userInput}
+			/>
+			{/* 
+					<Container
+				maxWidth='false'
+				style={{
+					background: "linear-gradient(to right, #8e9eab, #eef2f3)",
+					height: "100vh",
+				}}
+			>
+				<Grid
+					item
+					container
+					justify='center'
+					direction='column'
+					alignItems='center'
+					style={{ minHeight: "100vh" }}
+				>
+					<SearchBar
+						handleChange={(e) => handleChange(e)}
+						handleSubmit={(e) => handleSubmit(e)}
+						userInput={userInput}
+					/>
+				</Grid>
+				</Container> */}
+		</>
+	);
 }
 
 export default App;
