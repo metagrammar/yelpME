@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/yelpME/static/css/main.15bb9389.chunk.css",
+    "main.js": "/yelpME/static/js/main.c6ce7866.chunk.js",
+    "main.js.map": "/yelpME/static/js/main.c6ce7866.chunk.js.map",
+    "runtime-main.js": "/yelpME/static/js/runtime-main.2394a3e2.js",
+    "runtime-main.js.map": "/yelpME/static/js/runtime-main.2394a3e2.js.map",
+    "static/js/2.ebfbe558.chunk.js": "/yelpME/static/js/2.ebfbe558.chunk.js",
+    "static/js/2.ebfbe558.chunk.js.map": "/yelpME/static/js/2.ebfbe558.chunk.js.map",
+    "index.html": "/yelpME/index.html",
+    "precache-manifest.19a9b006129d099f6528920db20eb64a.js": "/yelpME/precache-manifest.19a9b006129d099f6528920db20eb64a.js",
+    "service-worker.js": "/yelpME/service-worker.js",
+    "static/css/main.15bb9389.chunk.css.map": "/yelpME/static/css/main.15bb9389.chunk.css.map",
+    "static/js/2.ebfbe558.chunk.js.LICENSE.txt": "/yelpME/static/js/2.ebfbe558.chunk.js.LICENSE.txt",
+    "static/media/berlin.png": "/yelpME/static/media/berlin.16c691a1.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2394a3e2.js",
+    "static/js/2.ebfbe558.chunk.js",
+    "static/css/main.15bb9389.chunk.css",
+    "static/js/main.c6ce7866.chunk.js"
+  ]
+}
