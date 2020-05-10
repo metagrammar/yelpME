@@ -1,11 +1,8 @@
 import React from 'react';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import IconButton from '@material-ui/core/IconButton';
-import Typography from '@material-ui/core/Typography';
+import {AppBar, Grid, Link} from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import MenuIcon from '@material-ui/icons/Menu';
-import SearchIcon from '@material-ui/icons/Search';
+import SearchInput from './SearchInput';
+import SmallLogo from '../images/yelpMeVert.svg'
 
 
 const useStyles = makeStyles((theme) => ({
@@ -15,12 +12,13 @@ const useStyles = makeStyles((theme) => ({
   menuButton: {
     marginRight: theme.spacing(2),
   },
-  toolbar: {
+  appbar: {
     minHeight: 128,
-    alignItems: 'flex-start',
+    alignItems: 'center',
+    justify: 'center',
     paddingTop: theme.spacing(1),
     paddingBottom: theme.spacing(2),
-    backgroundColor: 'transparent',
+    background: 'linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E)',
   },
   title: {
     flexGrow: 1,
@@ -32,31 +30,20 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-function Navbar() {
+function Navbar({ placeholder }) {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-      <AppBar position="fixed" style={{ backgroundColor: '#f5f5f5' }}>
-        <Toolbar className={classes.toolbar}>
-          <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="open drawer"
-            
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography className={classes.title} variant="h5" noWrap>
-            Placeholder for searchbar
-          </Typography>
-
-          <IconButton aria-label="search" color="inherit"  className={classes.hiddenMobile}>
-            <SearchIcon/>
-          </IconButton>
-
-        </Toolbar>
+      <AppBar className={classes.appbar} position="fixed" style={{ justify: 'center' }}>
+        <Grid item >
+          <Link to='/'>
+            <img src={SmallLogo} alt='Yelp me logo' style={{width: 200,  margin: '0.5em'}} />
+          </Link>
+        </Grid>
+          <SearchInput 
+          placeholder={placeholder} 
+          />
       </AppBar>
     </div>
   );
